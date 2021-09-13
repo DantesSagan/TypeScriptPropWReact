@@ -1,6 +1,6 @@
 export default function Main() {
   return (
-    <div>
+    <div className="mb-72">
       <h1
         className='text-4xl mt-28 p-10
       space-x-4 rounded-lg p-8 border-4 border-blue-900 shadow-inner font-mono text-3xl
