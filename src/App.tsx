@@ -12,6 +12,9 @@ const Props = lazy(() => import('./Components/Props'));
 const BasicProps = lazy(() => import('./Components/BasicProps'));
 const AdvancedProps = lazy(() => import('./Components/AdvancedProps'));
 const EventProps = lazy(() => import('./Components/EventProps'));
+const StyleProps = lazy(() => import('./Components/StyleProps'));
+const PropsTypesAndTips = lazy(() => import('./Components/PropsTypesNTips'));
+const UseStateHook = lazy(() => import('./Components/UseStateHook'));
 
 export default function App() {
   return (
@@ -24,6 +27,12 @@ export default function App() {
           <Route path={ROUTES.BasicProps} component={BasicProps} />
           <Route path={ROUTES.AdvancedProps} component={AdvancedProps} />
           <Route path={ROUTES.EventProps} component={EventProps} />
+          <Route path={ROUTES.StyleProps} component={StyleProps} />
+          <Route
+            path={ROUTES.PropsTypesAndTips}
+            component={PropsTypesAndTips}
+          />
+          <Route path={ROUTES.UseStateHook} component={UseStateHook} />
         </Switch>
       </Suspense>
     </BrowserRouter>

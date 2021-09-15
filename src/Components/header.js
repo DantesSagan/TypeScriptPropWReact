@@ -17,12 +17,21 @@ export default function Header() {
               <Link to={ROUTES.BasicProps}>Props#2</Link>
             </div>
             <div className='button p-2'>
-              <Link to={ROUTES.AdvancedProps}>AdvancedProps#1</Link>
+              <Link to={ROUTES.AdvancedProps}>AdvancedProps</Link>
             </div>
           </div>
           <div className='border border-blue-700 rounded-2xl m-2'>
             <div className='button p-2'>
-              <Link to={ROUTES.EventProps}>EventProps#1</Link>
+              <Link to={ROUTES.EventProps}>EventProps</Link>
+            </div>
+            <div className='button p-2'>
+              <Link to={ROUTES.StyleProps}>StyleProps</Link>
+            </div>
+            <div className='button p-2' style={{ fontSize: '1rem' }}>
+              <Link to={ROUTES.PropsTypesAndTips}>PropsTypesAndTips</Link>
+            </div>
+            <div className='button p-2' style={{ fontSize: '1rem' }}>
+              <Link to={ROUTES.UseStateHook}>UseStateHook</Link>
             </div>
           </div>
         </nav>
