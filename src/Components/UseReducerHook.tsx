@@ -89,6 +89,76 @@ export default function Counter() {
   );
 }
 
+// Or we can use this 
+// useReducer Strict Action Types 
+// Instead using payload Discriminated Union TypeScript -
+// The first way to combine types you might see is a union type. 
+// A union type is a type formed from two or more other types, representing values that may be any one of those types. 
+// We refer to each of these types as the union’s members.
+
+import { useReducer } from 'react';
+
+const initialState = { count: 0 };
+
+type CounterProps = {
+  count: number;
+};
+
+type UpdateAction = {
+  type: 'increment' | 'decrement' | 'reset';
+  payload: number;
+};
+
+type ResetAction = {
+  type: 'reset';
+};
+
+type CounterAction = UpdateAction | ResetAction;
+
+function reducer(state: CounterProps, action: CounterAction) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + action.payload };
+    case 'decrement':
+      return { count: state.count - action.payload };
+    case 'reset':
+      return initialState
+    default:
+      return state;
+  }
+}
+
+export default function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <>
+      Count: {state.count}
+      <br />
+      <button
+        onClick={() => dispatch({ type: 'increment', payload: 10 })}
+        className='m-2 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none'
+      >
+        Increment - 10
+      </button>
+      <br />
+      <button
+        onClick={() => dispatch({ type: 'decrement', payload: 10 })}
+        className='m-2 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none'
+      >
+        Decrement - 10
+      </button>
+      <br />
+      <button
+        onClick={() => dispatch({ type: 'reset' })}
+        className='m-2 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none'
+      >
+        Reset
+      </button>
+    </>
+  );
+}
+
+
         `;
     return (
       <SyntaxHighlighter language='javascript' style={dark}>
@@ -105,12 +175,12 @@ export default function Counter() {
     <div>
       {' '}
       <h2 className='text-center text-4xl p-4'>
-        This is a TypeScript page with how to use AdvancedProps!
+        This is a TypeScript page with how to use useReducer Hook and typeProps!
       </h2>
       <hr className='border-2 border-blue-700' />
       <h2 className='text-center text-3xl p-4'>
         This is example code to explain and show how to work TypeScript <br />{' '}
-        with three kind of props = Heading, Status, Oscar!
+        with useReducer and Type CounterProps and type CounterAction !
       </h2>
       <hr className='border-2 border-blue-700' />
       <h2 className='text-center text-3xl p-4'>

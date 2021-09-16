@@ -6,10 +6,16 @@ type CounterProps = {
   count: number;
 };
 
-type CounterAction = {
-  type: string;
+type UpdateAction = {
+  type: 'increment' | 'decrement' | 'reset';
   payload: number;
 };
+
+type ResetAction = {
+  type: 'reset';
+};
+
+type CounterAction = UpdateAction | ResetAction;
 
 function reducer(state: CounterProps, action: CounterAction) {
   switch (action.type) {
@@ -18,7 +24,7 @@ function reducer(state: CounterProps, action: CounterAction) {
     case 'decrement':
       return { count: state.count - action.payload };
     case 'reset':
-      return { count: action.payload };
+      return initialState
     default:
       return state;
   }
@@ -39,14 +45,14 @@ export default function Counter() {
       <br />
       <button
         onClick={() => dispatch({ type: 'decrement', payload: 10 })}
-        className='m-2 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none'
+        className='m-2 py-2 px-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none'
       >
         Decrement - 10
       </button>
       <br />
       <button
-        onClick={() => dispatch({ type: 'reset', payload: 0 })}
-        className='m-2 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none'
+        onClick={() => dispatch({ type: 'reset' })}
+        className='m-2 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none'
       >
         Reset
       </button>
