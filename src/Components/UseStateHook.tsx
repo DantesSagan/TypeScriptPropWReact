@@ -111,6 +111,58 @@ export default function User() {
     </div>
   );
 }
+// Additionaly if we are delete AuthUser | null we can 
+// make check without optional chainig operator
+// Using type Assertion to let typescript know user that the user always of AuthUser among null 
+// For type Assertion we are using Ask key word instead of null or AuthUser 
+// Instead initialValue of null we are creating empty object  Assertion AuthUser
+// This will now allowed us to access - name, and email- withotu optional chaining operator
+  
+import { useState } from 'react';
+
+type AuthUser = {
+  name: string;
+  email: string;
+};
+export default function User() {
+  const [user, setUser] = useState<AuthUser>({} as AuthUser);
+
+  const handleLogin = () => {
+    setUser({
+      name: 'DantesSagan',
+      email: 'WhaterverEmail@gmail.com',
+    });
+  };
+
+  const handleLogout = () => {
+    setUser({} as AuthUser);
+  };
+
+  return (
+    <div>
+      <button
+        onClick={handleLogin}
+        className='m-2 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none'
+      >
+        Login
+      </button>
+      <button
+        onClick={handleLogout}
+        className='m-2 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none'
+      >
+        LogOut
+      </button>
+      {/* ? - this is optional chaining operator */}
+      <div className='font-bold border border-white p-4 m-2 rounded-lg'>
+        User name is - {user.name}
+      </div>
+      <div className='font-bold border border-white p-4 m-2 rounded-lg'>
+        User email is - {user.email}
+      </div>
+    </div>
+  );
+}
+
 
         `;
     return (

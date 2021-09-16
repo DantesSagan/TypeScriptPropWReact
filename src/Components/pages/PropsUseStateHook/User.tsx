@@ -5,7 +5,7 @@ type AuthUser = {
   email: string;
 };
 export default function User() {
-  const [user, setUser] = useState<AuthUser | null>();
+  const [user, setUser] = useState<AuthUser>({} as AuthUser);
 
   const handleLogin = () => {
     setUser({
@@ -15,7 +15,7 @@ export default function User() {
   };
 
   const handleLogout = () => {
-    setUser(null);
+    setUser({} as AuthUser);
   };
 
   return (
@@ -34,10 +34,10 @@ export default function User() {
       </button>
       {/* ? - this is optional chaining operator */}
       <div className='font-bold border border-white p-4 m-2 rounded-lg'>
-        User name is - {user?.name}
+        User name is - {user.name}
       </div>
       <div className='font-bold border border-white p-4 m-2 rounded-lg'>
-        User email is - {user?.email}
+        User email is - {user.email}
       </div>
     </div>
   );
