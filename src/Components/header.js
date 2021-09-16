@@ -33,6 +33,9 @@ export default function Header() {
             <div className='button p-2' style={{ fontSize: '1rem' }}>
               <Link to={ROUTES.UseStateHook}>UseStateHook</Link>
             </div>
+            <div className='button p-2' style={{ fontSize: '1rem' }}>
+              <Link to={ROUTES.UseReducerHook}>UseReducerHook</Link>
+            </div>
           </div>
         </nav>
       </header>

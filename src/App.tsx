@@ -15,6 +15,7 @@ const EventProps = lazy(() => import('./Components/EventProps'));
 const StyleProps = lazy(() => import('./Components/StyleProps'));
 const PropsTypesAndTips = lazy(() => import('./Components/PropsTypesNTips'));
 const UseStateHook = lazy(() => import('./Components/UseStateHook'));
+const UseReducerHook = lazy(() => import('./Components/UseReducerHook'));
 
 export default function App() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
             component={PropsTypesAndTips}
           />
           <Route path={ROUTES.UseStateHook} component={UseStateHook} />
+          <Route path={ROUTES.UseReducerHook} component={UseReducerHook} />
         </Switch>
       </Suspense>
     </BrowserRouter>

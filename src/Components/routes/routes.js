@@ -6,3 +6,4 @@ export const EventProps = '/TypeScript/EventProps';
 export const StyleProps = '/TypeScript/StyleProps';
 export const PropsTypesAndTips = '/TypeScript/PropsTypesAndTips';
 export const UseStateHook = '/TypeScript/UseStateHook';
+export const UseReducerHook = '/TypeScript/UseReducerHook';
