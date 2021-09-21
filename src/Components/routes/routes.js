@@ -7,3 +7,5 @@ export const StyleProps = '/TypeScript/StyleProps';
 export const PropsTypesAndTips = '/TypeScript/PropsTypesAndTips';
 export const UseStateHook = '/TypeScript/UseStateHook';
 export const UseReducerHook = '/TypeScript/UseReducerHook';
+export const UseContextHook = '/TypeScript/UseContextHook';
+export const UserContext = '/TypeScript/UserContext';

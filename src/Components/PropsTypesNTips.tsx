@@ -95,7 +95,7 @@ export default function Person(props: PersonProps) {
       <h2 className='text-center text-3xl p-4'>
         This is example code to explain and show how to work TypeScript <br />{' '}
         with complex code for using Person.types.ts, creating Name type for
-        flexible woring in PersonList.tsx and Person.tsx!
+        flexible working in PersonList.tsx and Person.tsx!
       </h2>
       <hr className='border-2 border-blue-700' />
       <h2 className='text-center text-3xl p-4'>
