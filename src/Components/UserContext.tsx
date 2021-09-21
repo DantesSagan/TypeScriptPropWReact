@@ -31,6 +31,8 @@ export default function UserContext() {
 .
 // We are using Component AuthUser for use several type's of UserContextType 
 // And using useContext we declare user name and email for the future value's that can be uses
+// Or we can use {} as UserContextType instead  <UserContextType | null>(null)
+// For better and easier working with this createContext
 import { useState, createContext } from 'react';
 
 export type AuthUser = {
@@ -47,7 +49,7 @@ type UserContextProviderProps = {
   children: React.ReactNode;
 };
 
-export const UserContext = createContext<UserContextType | null>(null);
+export const UserContext = createContext({} as UserContextType);
 
 export const UserContextProvider = ({ children }: UserContextProviderProps) => {
   const [user, setUser] = useState<AuthUser | null>(null);
@@ -57,6 +59,7 @@ export const UserContextProvider = ({ children }: UserContextProviderProps) => {
     </UserContext.Provider>
   );
 };
+
 .
 .
 .
@@ -66,33 +69,47 @@ export const UserContextProvider = ({ children }: UserContextProviderProps) => {
 .
 // We are using Component User with useContext for handleLogin and handleLogout
 // And then we are using userContext - parameter - that we uses for declaring this parameter
+// Or we can use {} as UserContextType instead this optional chaining for better easy working
 import { useContext } from 'react';
 import { UserContext } from './AuthUser';
 
 export default function User() {
   const userContext = useContext(UserContext);
   const handleLogin = () => {
-    if (userContext) {
       userContext.setUser({
         name: 'DantesSagan',
         email: 'WhateverEmail@gmail.com',
       });
-    }
   };
   const handleLogout = () => {
-    if (userContext) {
       userContext.setUser(null);
-    }
   };
   return (
     <div>
-      <button onClick={handleLogin}>Login</button>
-      <button onClick={handleLogout}>Logout</button>
-      <div>User name is - {userContext?.user?.name}</div>
-      <div>User email is - {userContext?.user?.email}</div>
+      <div className='border border-blue-700 p-4 font-bold m-2'>
+        User name is - {userContext.user?.name}
+      </div>
+      <div className='border border-blue-700 p-4 font-bold m-2'>
+        User email is - {userContext.user?.email}
+      </div>
+      <br />
+      <button
+        className='bg-blue-500 hover:bg-blue-700 p-4 font-mono rounded-2xl m-2'
+        onClick={handleLogin}
+      >
+        Login
+      </button>
+      <button
+        className='bg-red-500 hover:bg-red-700 p-4 font-mono rounded-2xl m-2'
+        onClick={handleLogout}
+      >
+        Logout
+      </button>
+      <br />
     </div>
   );
 }
+
 
         `;
     return (

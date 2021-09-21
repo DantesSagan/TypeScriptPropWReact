@@ -4,25 +4,21 @@ import { UserContext } from './AuthUser';
 export default function User() {
   const userContext = useContext(UserContext);
   const handleLogin = () => {
-    if (userContext) {
       userContext.setUser({
         name: 'DantesSagan',
         email: 'WhateverEmail@gmail.com',
       });
-    }
   };
   const handleLogout = () => {
-    if (userContext) {
       userContext.setUser(null);
-    }
   };
   return (
     <div>
       <div className='border border-blue-700 p-4 font-bold m-2'>
-        User name is - {userContext?.user?.name}
+        User name is - {userContext.user?.name}
       </div>
       <div className='border border-blue-700 p-4 font-bold m-2'>
-        User email is - {userContext?.user?.email}
+        User email is - {userContext.user?.email}
       </div>
       <br />
       <button
