@@ -44,6 +44,9 @@ export default function Header() {
             <div className='button p-2' style={{ fontSize: '1rem' }}>
               <Link to={ROUTES.UserContext}>UserContext</Link>
             </div>
+            <div className='button p-2' style={{ fontSize: '1rem' }}>
+              <Link to={ROUTES.UseRef}>UseRef</Link>
+            </div>
           </div>
         </nav>
       </header>

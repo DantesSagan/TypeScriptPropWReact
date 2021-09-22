@@ -9,3 +9,4 @@ export const UseStateHook = '/TypeScript/UseStateHook';
 export const UseReducerHook = '/TypeScript/UseReducerHook';
 export const UseContextHook = '/TypeScript/UseContextHook';
 export const UserContext = '/TypeScript/UserContext';
+export const UseRef = '/TypeScript/UseRef';

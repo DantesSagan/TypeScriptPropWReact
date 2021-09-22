@@ -18,6 +18,7 @@ const UseStateHook = lazy(() => import('./Components/UseStateHook'));
 const UseReducerHook = lazy(() => import('./Components/UseReducerHook'));
 const UseContextHook = lazy(() => import('./Components/UseContextHook'));
 const UserContext = lazy(() => import('./Components/UserContext'));
+const UseRef = lazy(() => import('./Components/UseRef'));
 
 export default function App() {
   return (
@@ -39,6 +40,7 @@ export default function App() {
           <Route path={ROUTES.UseReducerHook} component={UseReducerHook} />
           <Route path={ROUTES.UseContextHook} component={UseContextHook} />
           <Route path={ROUTES.UserContext} component={UserContext} />
+          <Route path={ROUTES.UseRef} component={UseRef} />
         </Switch>
       </Suspense>
     </BrowserRouter>
