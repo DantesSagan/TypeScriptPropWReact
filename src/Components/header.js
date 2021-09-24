@@ -38,14 +38,25 @@ export default function Header() {
             </div>
           </div>
           <div className='border border-blue-700 rounded-2xl m-2'>
-            <div className='button p-2' style={{ fontSize: '1rem' }}>
+            <div className='button p-2'>
               <Link to={ROUTES.UseContextHook}>UseContextHook</Link>
             </div>
-            <div className='button p-2' style={{ fontSize: '1rem' }}>
+            <div className='button p-2'>
               <Link to={ROUTES.UserContext}>UserContext</Link>
             </div>
             <div className='button p-2' style={{ fontSize: '1rem' }}>
               <Link to={ROUTES.UseRef}>UseRef</Link>
+            </div>
+            <div className='button p-2' style={{ fontSize: '1rem' }}>
+              <Link to={ROUTES.ClassComponent}>Class Component</Link>
+            </div>
+            <div className='button p-2' style={{ fontSize: '1rem' }}>
+              <Link to={ROUTES.ComponentProp}>Component Prop</Link>
+            </div>
+          </div>
+          <div className='border border-blue-700 rounded-2xl m-2'>
+            <div className='button p-2' style={{ fontSize: '1rem' }}>
+              <Link to={ROUTES.GenericProp}>Generic Prop</Link>
             </div>
           </div>
         </nav>

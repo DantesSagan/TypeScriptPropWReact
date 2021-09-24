@@ -10,3 +10,6 @@ export const UseReducerHook = '/TypeScript/UseReducerHook';
 export const UseContextHook = '/TypeScript/UseContextHook';
 export const UserContext = '/TypeScript/UserContext';
 export const UseRef = '/TypeScript/UseRef';
+export const ClassComponent = '/TypeScript/ClassComponent';
+export const ComponentProp = '/TypeScript/ComponentProp';
+export const GenericProp = '/TypeScript/GenericProp';

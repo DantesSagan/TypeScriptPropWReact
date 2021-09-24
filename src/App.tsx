@@ -19,6 +19,9 @@ const UseReducerHook = lazy(() => import('./Components/UseReducerHook'));
 const UseContextHook = lazy(() => import('./Components/UseContextHook'));
 const UserContext = lazy(() => import('./Components/UserContext'));
 const UseRef = lazy(() => import('./Components/UseRef'));
+const ClassComponent = lazy(() => import('./Components/ClassComponent'));
+const ComponentProp = lazy(() => import('./Components/ComponentProp'));
+const GenericProp = lazy(() => import('./Components/GenericProp'));
 
 export default function App() {
   return (
@@ -41,6 +44,9 @@ export default function App() {
           <Route path={ROUTES.UseContextHook} component={UseContextHook} />
           <Route path={ROUTES.UserContext} component={UserContext} />
           <Route path={ROUTES.UseRef} component={UseRef} />
+          <Route path={ROUTES.ClassComponent} component={ClassComponent} />
+          <Route path={ROUTES.ComponentProp} component={ComponentProp} />
+          <Route path={ROUTES.GenericProp} component={GenericProp} />
         </Switch>
       </Suspense>
     </BrowserRouter>
