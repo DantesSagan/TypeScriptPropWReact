@@ -58,6 +58,9 @@ export default function Header() {
             <div className='button p-2' style={{ fontSize: '1rem' }}>
               <Link to={ROUTES.GenericProp}>Generic Prop</Link>
             </div>
+            <div className='button p-2' style={{ fontSize: '1rem' }}>
+              <Link to={ROUTES.RestrictProps}>Restrict Props</Link>
+            </div>
           </div>
         </nav>
       </header>

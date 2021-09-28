@@ -13,3 +13,4 @@ export const UseRef = '/TypeScript/UseRef';
 export const ClassComponent = '/TypeScript/ClassComponent';
 export const ComponentProp = '/TypeScript/ComponentProp';
 export const GenericProp = '/TypeScript/GenericProp';
+export const RestrictProps = '/TypeScript/RestrictProps';
