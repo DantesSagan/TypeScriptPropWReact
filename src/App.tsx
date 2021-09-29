@@ -23,6 +23,9 @@ const ClassComponent = lazy(() => import('./Components/ClassComponent'));
 const ComponentProp = lazy(() => import('./Components/ComponentProp'));
 const GenericProp = lazy(() => import('./Components/GenericProp'));
 const RestrictProps = lazy(() => import('./Components/RestrictingProps'));
+const TemplateLiteralsAndExclude = lazy(
+  () => import('./Components/TemplateLiteralsAndExclude')
+);
 
 export default function App() {
   return (
@@ -49,6 +52,10 @@ export default function App() {
           <Route path={ROUTES.ComponentProp} component={ComponentProp} />
           <Route path={ROUTES.GenericProp} component={GenericProp} />
           <Route path={ROUTES.RestrictProps} component={RestrictProps} />
+          <Route
+            path={ROUTES.TemplateLiteralsAndExclude}
+            component={TemplateLiteralsAndExclude}
+          />
         </Switch>
       </Suspense>
     </BrowserRouter>

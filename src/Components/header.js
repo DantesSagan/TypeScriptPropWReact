@@ -15,7 +15,7 @@ export default function Header() {
           >
             <button
               className='buttonM dropdown'
-              style={{ display: 'inline-block'  }}
+              style={{ display: 'inline-block' }}
             >
               Props
               <div className='dropdown-content' style={{ fontSize: '1rem' }}>
@@ -80,16 +80,21 @@ export default function Header() {
                   <Link to={ROUTES.PropsTypesAndTips}>PropsTypesAndTips</Link>
                 </div>
                 <div className='button'>
-                  <Link to={ROUTES.ClassComponent}>Class Component Prop</Link>
+                  <Link to={ROUTES.ClassComponent}>Class ComponentProps</Link>
                 </div>
                 <div className='button'>
-                  <Link to={ROUTES.ComponentProp}>Component Prop</Link>
+                  <Link to={ROUTES.ComponentProp}>Component Props</Link>
                 </div>{' '}
                 <div className='button'>
-                  <Link to={ROUTES.GenericProp}>Generic Prop</Link>
+                  <Link to={ROUTES.GenericProp}>Generic Props</Link>
                 </div>
                 <div className='button'>
                   <Link to={ROUTES.RestrictProps}>Restrict Props</Link>
+                </div>
+                <div className='button'>
+                  <Link to={ROUTES.TemplateLiteralsAndExclude}>
+                    ExculdeProps
+                  </Link>
                 </div>
               </div>
             </button>

@@ -94,15 +94,6 @@
   text-shadow: -1px 0 black, 0 0px black, 1px 0 black, 0 -1px black;
 }
 
-.buttonM {
-  border: 1px solid black;
-  border-radius: 15px;
-}
-.buttonM:active {
-  transform: scale(0.85);
-  transition: 0.25;
-  boxshadow: '3px 3px 5px black';
-}
 .output {
   font-size: 1.5em;
   border: 1px solid black;
