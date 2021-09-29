@@ -181,7 +181,7 @@ export default function PersonList(props: PersonListProps) {
           <span className='font-bold'>Greet 2</span> with{' '}
           <span className='font-bold'>messageCount</span> and{' '}
           <span className='font-bold'>isLoggedIn </span>
-          showing "Welome guest!" because we aren't loggedIn :D{' '}
+          showing "Welcome guest!" because we aren't loggedIn :D{' '}
         </p>
         <Greet2 name='DantesSagan' messageCount={20} isLoggedIn={false} />
         <br />
