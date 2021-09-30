@@ -16,3 +16,4 @@ export const GenericProp = '/TypeScript/GenericProp';
 export const RestrictProps = '/TypeScript/RestrictProps';
 export const TemplateLiteralsAndExclude =
   '/TypeScript/TemplateLiteralsAndExclude';
+export const WrappingHTMLElement = '/TypeScript/WrappingHTMLElement';
