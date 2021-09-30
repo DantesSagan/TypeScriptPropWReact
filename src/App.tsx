@@ -26,7 +26,6 @@ const RestrictProps = lazy(() => import('./Components/RestrictingProps'));
 const TemplateLiteralsAndExclude = lazy(
   () => import('./Components/TemplateLiteralsAndExclude')
 );
-
 const WrappingHTMLElement = lazy(
   () => import('./Components/WrappingHTMLElement')
 );
@@ -56,6 +55,10 @@ export default function App() {
           <Route path={ROUTES.ComponentProp} component={ComponentProp} />
           <Route path={ROUTES.GenericProp} component={GenericProp} />
           <Route path={ROUTES.RestrictProps} component={RestrictProps} />
+          <Route
+            path={ROUTES.TemplateLiteralsAndExclude}
+            component={TemplateLiteralsAndExclude}
+          />
           <Route
             path={ROUTES.WrappingHTMLElement}
             component={WrappingHTMLElement}
