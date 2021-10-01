@@ -29,7 +29,12 @@ const TemplateLiteralsAndExclude = lazy(
 const WrappingHTMLElement = lazy(
   () => import('./Components/WrappingHTMLElement')
 );
-
+const ExtractingAComponentsPropTypes = lazy(
+  () => import('./Components/ExtractingAComponentsPropTypes')
+);
+const PolymorphicComponents = lazy(
+  () => import('./Components/PolymorphicComponents')
+);
 export default function App() {
   return (
     <BrowserRouter>
@@ -62,6 +67,14 @@ export default function App() {
           <Route
             path={ROUTES.WrappingHTMLElement}
             component={WrappingHTMLElement}
+          />
+          <Route
+            path={ROUTES.ExtractingAComponentsPropTypes}
+            component={ExtractingAComponentsPropTypes}
+          />
+          <Route
+            path={ROUTES.PolymorphicComponents}
+            component={PolymorphicComponents}
           />
         </Switch>
       </Suspense>

@@ -17,3 +17,6 @@ export const RestrictProps = '/TypeScript/RestrictProps';
 export const TemplateLiteralsAndExclude =
   '/TypeScript/TemplateLiteralsAndExclude';
 export const WrappingHTMLElement = '/TypeScript/WrappingHTMLElement';
+export const ExtractingAComponentsPropTypes =
+  '/TypeScript/ExtractingAComponentsPropTypes';
+export const PolymorphicComponents = '/TypeScript/PolymorphicComponents';

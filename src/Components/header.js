@@ -96,9 +96,32 @@ export default function Header() {
                     ExculdeProps
                   </Link>
                 </div>
+              </div>
+            </button>
+          </div>{' '}
+          <div
+            className='border border-blue-700 rounded-2xl m-2 '
+            style={{ display: 'inline-block', padding: '10px' }}
+          >
+            <button
+              className='buttonM dropdown'
+              style={{ display: 'inline-block' }}
+            >
+              Props
+              <div className='dropdown-content' style={{ fontSize: '1rem' }}>
                 <div className='button'>
                   <Link to={ROUTES.WrappingHTMLElement}>
                     WrappingHTMLElement
+                  </Link>
+                </div>
+                <div className='button'>
+                  <Link to={ROUTES.ExtractingAComponentsPropTypes}>
+                    ExtractingAComponentsPropTypes
+                  </Link>
+                </div>
+                <div className='button'>
+                  <Link to={ROUTES.PolymorphicComponents}>
+                    PolymorphicComponents
                   </Link>
                 </div>
               </div>
